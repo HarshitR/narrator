@@ -80,6 +80,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
+    private static Toast toast;
+
     // A TextToSpeech engine for speaking a String value.
 //    private TextToSpeech tts;
 
@@ -113,6 +115,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         Snackbar.make(mGraphicOverlay, "Tap to Speak. Pinch/Stretch to zoom",
                 Snackbar.LENGTH_LONG)
                 .show();
+
+        toast = new Toast(this);
 
         // Set up the Text To Speech engine.
         /*TextToSpeech.OnInitListener listener =
@@ -351,7 +355,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
                 // Speak the string.
 //                tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
-                Toast.makeText(this, text.getValue(), Toast.LENGTH_LONG).show();
+                toast.makeText(this, text.getValue(), Toast.LENGTH_LONG).show();
             }
             else {
                 Log.d(TAG, "text data is null");

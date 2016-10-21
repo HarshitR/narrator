@@ -39,20 +39,20 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="353" column="71" selection-start-line="353" selection-start-column="71" selection-end-line="353" selection-end-column="71" />
+              <caret line="357" column="75" selection-start-line="357" selection-start-column="75" selection-end-line="357" selection-end-column="75" />
               <folding>
                 <element signature="method#requestCameraPermission#0;class#OcrCaptureActivity#0" expanded="false" />
-                <element signature="e#5997#6241#0" expanded="true" />
-                <element signature="e#6240#6241#0" expanded="true" />
-                <element signature="e#6283#6319#0" expanded="true" />
-                <element signature="e#6392#6403#0" expanded="true" />
-                <element signature="e#8900#8926#0" expanded="true" />
-                <element signature="e#8982#9019#0" expanded="true" />
+                <element signature="e#6064#6308#0" expanded="true" />
+                <element signature="e#6307#6308#0" expanded="true" />
+                <element signature="e#6350#6386#0" expanded="true" />
+                <element signature="e#6459#6470#0" expanded="true" />
+                <element signature="e#8967#8993#0" expanded="true" />
+                <element signature="e#9049#9086#0" expanded="true" />
                 <element signature="method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" expanded="false" />
-                <element signature="e#12444#12599#0" expanded="true" />
-                <element signature="e#12598#12599#0" expanded="true" />
-                <element signature="e#12747#12776#0" expanded="true" />
-                <element signature="e#12813#12824#0" expanded="true" />
+                <element signature="e#12511#12666#0" expanded="true" />
+                <element signature="e#12665#12666#0" expanded="true" />
+                <element signature="e#12814#12843#0" expanded="true" />
+                <element signature="e#12880#12891#0" expanded="true" />
                 <element signature="method#startCameraSource#0;class#OcrCaptureActivity#0" expanded="false" />
                 <element signature="class#CaptureGestureListener#0;class#OcrCaptureActivity#0" expanded="false" />
                 <element signature="class#ScaleListener#0;class#OcrCaptureActivity#0" expanded="false" />
@@ -1988,7 +1988,7 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="35806905215717" />
+    <property name="device.picker.selection" value="EP730722R4" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -2241,17 +2241,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#requestCameraPermission#0;class#OcrCaptureActivity#0" expanded="false" />
-            <element signature="e#5997#6241#0" expanded="true" />
-            <element signature="e#6240#6241#0" expanded="true" />
-            <element signature="e#6283#6319#0" expanded="true" />
-            <element signature="e#6392#6403#0" expanded="true" />
-            <element signature="e#8900#8926#0" expanded="true" />
-            <element signature="e#8982#9019#0" expanded="true" />
+            <element signature="e#6064#6308#0" expanded="true" />
+            <element signature="e#6307#6308#0" expanded="true" />
+            <element signature="e#6350#6386#0" expanded="true" />
+            <element signature="e#6459#6470#0" expanded="true" />
+            <element signature="e#8967#8993#0" expanded="true" />
+            <element signature="e#9049#9086#0" expanded="true" />
             <element signature="method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" expanded="false" />
-            <element signature="e#12444#12599#0" expanded="true" />
-            <element signature="e#12598#12599#0" expanded="true" />
-            <element signature="e#12747#12776#0" expanded="true" />
-            <element signature="e#12813#12824#0" expanded="true" />
+            <element signature="e#12511#12666#0" expanded="true" />
+            <element signature="e#12665#12666#0" expanded="true" />
+            <element signature="e#12814#12843#0" expanded="true" />
+            <element signature="e#12880#12891#0" expanded="true" />
             <element signature="method#startCameraSource#0;class#OcrCaptureActivity#0" expanded="false" />
             <element signature="class#CaptureGestureListener#0;class#OcrCaptureActivity#0" expanded="false" />
             <element signature="class#ScaleListener#0;class#OcrCaptureActivity#0" expanded="false" />
@@ -2276,17 +2276,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#requestCameraPermission#0;class#OcrCaptureActivity#0" expanded="false" />
-            <element signature="e#5997#6241#0" expanded="true" />
-            <element signature="e#6240#6241#0" expanded="true" />
-            <element signature="e#6283#6319#0" expanded="true" />
-            <element signature="e#6392#6403#0" expanded="true" />
-            <element signature="e#8900#8926#0" expanded="true" />
-            <element signature="e#8982#9019#0" expanded="true" />
+            <element signature="e#6064#6308#0" expanded="true" />
+            <element signature="e#6307#6308#0" expanded="true" />
+            <element signature="e#6350#6386#0" expanded="true" />
+            <element signature="e#6459#6470#0" expanded="true" />
+            <element signature="e#8967#8993#0" expanded="true" />
+            <element signature="e#9049#9086#0" expanded="true" />
             <element signature="method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" expanded="false" />
-            <element signature="e#12444#12599#0" expanded="true" />
-            <element signature="e#12598#12599#0" expanded="true" />
-            <element signature="e#12747#12776#0" expanded="true" />
-            <element signature="e#12813#12824#0" expanded="true" />
+            <element signature="e#12511#12666#0" expanded="true" />
+            <element signature="e#12665#12666#0" expanded="true" />
+            <element signature="e#12814#12843#0" expanded="true" />
+            <element signature="e#12880#12891#0" expanded="true" />
             <element signature="method#startCameraSource#0;class#OcrCaptureActivity#0" expanded="false" />
             <element signature="class#CaptureGestureListener#0;class#OcrCaptureActivity#0" expanded="false" />
             <element signature="class#ScaleListener#0;class#OcrCaptureActivity#0" expanded="false" />
@@ -2332,23 +2332,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-24/android/widget/Toast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="353" column="71" selection-start-line="353" selection-start-column="71" selection-end-line="353" selection-end-column="71" />
+          <caret line="357" column="75" selection-start-line="357" selection-start-column="75" selection-end-line="357" selection-end-column="75" />
           <folding>
             <element signature="method#requestCameraPermission#0;class#OcrCaptureActivity#0" expanded="false" />
-            <element signature="e#5997#6241#0" expanded="true" />
-            <element signature="e#6240#6241#0" expanded="true" />
-            <element signature="e#6283#6319#0" expanded="true" />
-            <element signature="e#6392#6403#0" expanded="true" />
-            <element signature="e#8900#8926#0" expanded="true" />
-            <element signature="e#8982#9019#0" expanded="true" />
+            <element signature="e#6064#6308#0" expanded="true" />
+            <element signature="e#6307#6308#0" expanded="true" />
+            <element signature="e#6350#6386#0" expanded="true" />
+            <element signature="e#6459#6470#0" expanded="true" />
+            <element signature="e#8967#8993#0" expanded="true" />
+            <element signature="e#9049#9086#0" expanded="true" />
             <element signature="method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" expanded="false" />
-            <element signature="e#12444#12599#0" expanded="true" />
-            <element signature="e#12598#12599#0" expanded="true" />
-            <element signature="e#12747#12776#0" expanded="true" />
-            <element signature="e#12813#12824#0" expanded="true" />
+            <element signature="e#12511#12666#0" expanded="true" />
+            <element signature="e#12665#12666#0" expanded="true" />
+            <element signature="e#12814#12843#0" expanded="true" />
+            <element signature="e#12880#12891#0" expanded="true" />
             <element signature="method#startCameraSource#0;class#OcrCaptureActivity#0" expanded="false" />
             <element signature="class#CaptureGestureListener#0;class#OcrCaptureActivity#0" expanded="false" />
             <element signature="class#ScaleListener#0;class#OcrCaptureActivity#0" expanded="false" />
