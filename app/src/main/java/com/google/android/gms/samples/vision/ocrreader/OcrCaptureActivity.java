@@ -26,9 +26,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
@@ -41,17 +43,28 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSource;
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePreview;
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
-import java.util.Locale;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Activity for the Ocr Detecting app.  This app detects text and displays the value with the
@@ -67,6 +80,10 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
 
+    // Request timeout duration
+    private static int DEFAULT_TIMEOUT_MS = 10000;
+    private static String PARAM_KEY = "text";
+
     // Constants used to pass extra data in the intent
     public static final String AutoFocus = "AutoFocus";
     public static final String UseFlash = "UseFlash";
@@ -80,7 +97,16 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
+    private Response.Listener getListener;
+    private Response.ErrorListener error;
+    private Response.Listener responseListener;
+    private Response.ErrorListener errorListener;
+    private RequestQueue mRequestQueue;
     private static Toast toast;
+    private static MediaPlayer narrator;
+
+    private Activity mActivity;
+
 
     // A TextToSpeech engine for speaking a String value.
 //    private TextToSpeech tts;
@@ -92,6 +118,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.ocr_capture);
+        mActivity = this;
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
@@ -117,6 +144,54 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 .show();
 
         toast = new Toast(this);
+
+        //Init Volley Listeners
+        getListener = new Response.Listener() {
+            @Override
+            public void onResponse(Object response) {
+
+            }
+        };
+        error = new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        };
+
+        mRequestQueue = Volley.newRequestQueue(getApplicationContext());
+        responseListener = new Response.Listener() {
+            @Override
+            public void onResponse(Object response) {
+//                sendGetRequest((String)response, getListener, error);
+                JSONObject object = null;
+                try {
+                    object = new JSONObject(String.valueOf(response));
+                    narrator = new MediaPlayer();
+                    narrator.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    narrator.setDataSource(mActivity, Uri.parse(object.getString("uri")));
+                    narrator.prepare();
+                    narrator.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            mp.stop();
+                            mp.release();
+                        }
+                    });
+                    narrator.start();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        errorListener = new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        };
 
         // Set up the Text To Speech engine.
         /*TextToSpeech.OnInitListener listener =
@@ -346,7 +421,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
      * @return true if the tap was on a TextBlock
      */
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private boolean onTap(float rawX, float rawY) {
+    private boolean onTap(float rawX, float rawY){
         OcrGraphic graphic = mGraphicOverlay.getGraphicAtLocation(rawX, rawY);
         TextBlock text = null;
         if (graphic != null) {
@@ -354,7 +429,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
                 // Speak the string.
-//                tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+//                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                sendTextRequest(text.getValue(), responseListener, errorListener);
                 toast.makeText(this, text.getValue(), Toast.LENGTH_LONG).show();
             }
             else {
@@ -367,8 +443,99 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         return text != null;
     }
 
+    private void sendGetRequest(String response, Response.Listener responseListener, Response.ErrorListener errorListener) {
+        JSONObject port = null;
+        try {
+            port = new JSONObject(response);
+            Map<String, String> params = new HashMap<>();
+            JsonObjectRequest request = null;
+            request = getGetRequest(
+                    port.getString("url"),
+                    params, responseListener, errorListener);
+
+            request.setRetryPolicy(new DefaultRetryPolicy(
+                    DEFAULT_TIMEOUT_MS,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            mRequestQueue.add(request);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static JsonObjectRequest getGetRequest(String url, final Map params, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener){
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, listener, errorListener) {
+            @Override
+            public Map<String, String> getParams() {
+                return params;
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+        try {
+            request.getHeaders().toString();
+        } catch (AuthFailureError authFailureError) {
+            authFailureError.printStackTrace();
+        }
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                DEFAULT_TIMEOUT_MS,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        return request;
+    }
+
+    private void sendTextRequest(String value, Response.Listener responseListener, Response.ErrorListener errorListener){
+        String port_number = "http://192.168.43.78:9000/sendtext";
+        JSONObject params = new JSONObject();
+        try {
+            params.put(PARAM_KEY, value);
+
+            JsonObjectRequest request = null;
+            request =  getJsonObjectRequest(
+                    port_number,
+                    params, responseListener, errorListener);
+
+            request.setRetryPolicy(new DefaultRetryPolicy(
+                    DEFAULT_TIMEOUT_MS,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            mRequestQueue.add(request);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static JsonObjectRequest getJsonObjectRequest(String url, final JSONObject params, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, params, listener, errorListener) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+//        Log.d("UserToken", request.getUrl());
+        try {
+//            Log.d("UserToken", request.getHeaders().toString());
+            request.getHeaders().toString();
+        } catch (AuthFailureError authFailureError) {
+            authFailureError.printStackTrace();
+        }
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                DEFAULT_TIMEOUT_MS,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        return request;
+    }
+
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
 
+        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         @Override
         public boolean onSingleTapConfirmed(MotionEvent e) {
             return onTap(e.getRawX(), e.getRawY()) || super.onSingleTapConfirmed(e);

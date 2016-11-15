@@ -1,3 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_25c16b5612b2dbe6edd2aafdd0a8d4743696f25c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="30489a97b06cc3945bdbcc1770089af9e3b3b64d">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.2.0_8a593f33493fc7a7e34b7148031ae5e26748dacc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_91427ea44a81002b857942c22c2e37081bfcdff4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_f477d7b3acb8e80975ba717d1c5014d731ec4f84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_5571d422524db01ff0b7cba39088faa005b4f163.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3c8fcebabb73df25937704f5566bf6c388ea941d">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-9.2.0_8031f91ad5c8a11885d96e601f4a5c0c6fff5783.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_b7578a8458bc72c4aaa997353102831b0bde4fca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ed8ac90db1273cd398f3cdd0ada91e8a985e1933.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7ceef8008015861d029b4b0d17e64554cec28c40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_c3919e391a02dad9260cc937f89695cceb5bdca1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_d33585106223f21b2978a68ff46ce39b2b5a6b45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7392535c1be293400b4c69d919ef4112b90c3626.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_2bdfd17b6371d01ba0ff58522db9bb69c51b9cfc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_fb4921e0dff5ec77b9dfc22cfb17dc1b0718af50.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="dd7676ac12aa6653718b7ea33d93ce9d6915d526">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.2.0_276ad2fb069a3b6de842901448c06228aa43b87a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="593fbaec1c3e100480a2bd72457b64b7dde6ac2d">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.2.0_f28f23f102b091909651deb355ffbfaf56c5f409.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\library-1.0.19_77e1688d0a98eb177ddce115da182e9999856c66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_e6e077a6fb0c42b9272cd602d191c2fa7cb8fb20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_6ce023abc8ca332b67b23de90aeecde02004a27d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_8552aafe262929ed5490bd56cd5d11e5025ce7cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_b33d7d0fd54969bebf0860c8e61a9274ae3ab98f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ocr-reader-complete\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="G:\ocr-reader-complete\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_fd92d2ab068a02a02820da9e61632874506a4c2a.jar" />
+    </item>
+
+</items>
